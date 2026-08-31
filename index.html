@@ -2,7 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
 
   <title>Mancunianity</title>
 
@@ -12,125 +16,191 @@
   >
 
   <style>
+    :root {
+      --navy: #173f5f;
+      --red: #9a302f;
+      --cream: #f5efe2;
+      --white: #ffffff;
+      --text: #243b4a;
+      --muted: #52616b;
+      --border: #c9c0b1;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      color: #17324d;
-      background: #f5efe2;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--cream);
     }
 
     main {
-      max-width: 760px;
+      width: min(100% - 40px, 800px);
       margin: 0 auto;
-      padding: 48px 24px;
+      padding: 56px 0 40px;
     }
 
     h1 {
-      margin-bottom: 6px;
-      font-size: 2.8rem;
-      line-height: 1.1;
-      color: #173f5f;
+      margin: 0 0 10px;
+      color: var(--navy);
+      font-size: clamp(2.8rem, 8vw, 4.5rem);
+      line-height: 1;
+      letter-spacing: -0.03em;
     }
 
     h2 {
-      color: #983832;
+      margin-top: 0;
+      color: var(--red);
+      font-size: 1.8rem;
+      line-height: 1.25;
+    }
+
+    p {
+      margin: 0 0 1.2rem;
     }
 
     .strapline {
-      margin-top: 0;
+      margin-bottom: 28px;
+      color: var(--muted);
       font-size: 1.25rem;
-      font-weight: bold;
-      color: #4d6576;
+      font-weight: 700;
+      line-height: 1.4;
     }
 
     .panel {
-      margin-top: 30px;
-      padding: 26px;
-      background: #ffffff;
-      border-left: 7px solid #b92d2d;
-      border-radius: 10px;
+      margin: 34px 0;
+      padding: 30px;
+      background: var(--white);
+      border-left: 8px solid var(--red);
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(23, 63, 95, 0.08);
     }
 
     .button {
       display: inline-block;
-      margin-top: 12px;
-      padding: 12px 18px;
-      color: #ffffff;
-      background: #173f5f;
-      border-radius: 6px;
+      margin-top: 8px;
+      padding: 13px 20px;
+      color: var(--white);
+      background: var(--navy);
+      border: 2px solid var(--navy);
+      border-radius: 7px;
+      font-weight: 700;
       text-decoration: none;
-      font-weight: bold;
     }
 
     .button:hover,
     .button:focus {
-      background: #9a302f;
+      color: var(--white);
+      background: var(--red);
+      border-color: var(--red);
+      outline: 3px solid rgba(154, 48, 47, 0.25);
+      outline-offset: 3px;
+    }
+
+    .question {
+      margin-top: 30px;
+      color: var(--navy);
+      font-size: 1.25rem;
+      font-weight: 700;
     }
 
     footer {
-      margin-top: 42px;
-      padding-top: 20px;
-      border-top: 1px solid #c9c0b1;
+      margin-top: 46px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border);
+      color: var(--muted);
       font-size: 0.9rem;
-      color: #52616b;
+      line-height: 1.7;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        font-size: 17px;
+      }
+
+      main {
+        width: min(100% - 28px, 800px);
+        padding-top: 38px;
+      }
+
+      .panel {
+        padding: 22px;
+      }
+
+      .button {
+        display: block;
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
 
 <body>
   <main>
-    <h1>Mancunianity</h1>
+    <header>
+      <h1>Mancunianity</h1>
 
-    <p class="strapline">
-      Stories, journeys and creative connections across Manchester and Salford
-    </p>
+      <p class="strapline">
+        Stories, journeys and creative connections across Manchester
+        and Salford
+      </p>
+    </header>
 
     <p>
-      Mancunianity explores how people, places, memories and ideas shape
-      our sense of belonging to Manchester and Salford.
+      Mancunianity explores how people, places, memories and ideas
+      shape our sense of belonging to Manchester and Salford.
     </p>
 
-    <div class="panel">
-      <h2>Mancunianity Flows</h2>
+    <section class="panel" aria-labelledby="flows-heading">
+      <h2 id="flows-heading">Mancunianity Flows</h2>
 
       <p>
         <strong>Walking the World’s First Modern City</strong>
       </p>
 
       <p>
-        Mancunianity Flows is an Arts Council England-funded cultural
-        project connecting Manchester and Salford’s world-changing history
-        with the memories, music and stories of local people.
+        <em>Mancunianity Flows</em> is an Arts Council England-funded
+        cultural project connecting Manchester and Salford’s
+        world-changing history with the memories, music and stories
+        of local people.
       </p>
 
       <p>
-        Ten older local Weavers will help shape a creative walking experience
-        along the River Irwell through storytelling, music and shared
-        exploration of place.
+        Ten older local Weavers will help shape a creative walking
+        experience along the River Irwell through storytelling, music
+        and shared exploration of place.
       </p>
 
       <p>
-        Public walks, an illustrated map, audio stories, school resources
-        and the Mancunianity Archive are coming soon.
+        Public walks, an illustrated map, audio stories, schools
+        resources and the Mancunianity Archive are coming soon.
       </p>
 
-      map/
+      ./map/
         Follow the Spider’s Web
       </a>
-    </div>
+    </section>
 
     <p>
-      Manchester’s history lives not only in its buildings, rivers and
-      railways, but in its people.
+      Manchester’s history lives not only in its buildings, rivers
+      and railways, but in its people.
     </p>
 
-    <p><strong>What is your Manchester history?</strong></p>
+    <p class="question">
+      What is your Manchester history?
+    </p>
 
     <footer>
       Created and led by Nakib Narat.<br>
       Funded by Arts Council England.<br>
-      Developed with the support of Aviva Studios, home of Factory International.<br>
+      Developed with the support of Aviva Studios, home of Factory
+      International.<br>
       © Nakib Narat 2026.
     </footer>
   </main>
