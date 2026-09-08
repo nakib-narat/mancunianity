@@ -3,71 +3,45 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
   <title>Follow the Spider's Web | Mancunianity</title>
-
-  <meta
-    name="description"
-    content="Explore the Mancunianity Flows illustrated River Irwell walk between Manchester and Salford."
-  >
-
+  <meta name="description" content="Explore the Mancunianity Flows illustrated River Irwell walk between Manchester and Salford.">
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      overflow-x: hidden;
-    }
-
+    * { box-sizing: border-box; }
+    html { overflow-x: hidden; }
     body {
       margin: 0;
-      background-color: #f5efe2;
+      background: #f5efe2;
       color: #243b4a;
       font-family: Arial, Helvetica, sans-serif;
       font-size: 18px;
       line-height: 1.6;
       overflow-wrap: break-word;
     }
-
     main {
-      width: min(100% - 32px, 1200px);
+      width: min(calc(100% - 32px), 1200px);
       margin: 0 auto;
       padding: 42px 0;
     }
-
     h1 {
       margin: 0 0 8px;
       color: #173f5f;
       font-size: clamp(2.5rem, 7vw, 4.5rem);
       line-height: 1.05;
     }
-
     h2 {
       margin: 0 0 28px;
       color: #983832;
       font-size: clamp(1.25rem, 3vw, 1.8rem);
       line-height: 1.3;
     }
-
-    h3 {
-      margin-top: 0;
-      color: #173f5f;
-      font-size: clamp(1.4rem, 3vw, 2rem);
-      line-height: 1.25;
-    }
-
+    h3 { margin-top: 0; color: #173f5f; }
     .map-frame {
-      width: 100%;
-      height: auto;
       margin: 30px 0;
       padding: 10px;
-      overflow: visible;
-      background-color: #ffffff;
+      background: #fff;
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(23, 63, 95, 0.15);
     }
-
     .map-frame img {
       display: block;
       width: 100%;
@@ -75,47 +49,24 @@
       height: auto;
       border-radius: 7px;
     }
-
     .panel {
-      width: 100%;
-      height: auto;
       margin: 30px 0;
       padding: 26px;
-      overflow: visible;
-      background-color: #ffffff;
+      background: #fff;
       border-left: 8px solid #9a302f;
       border-radius: 12px;
     }
-
-    .panel p:first-of-type {
-      margin-top: 0;
-    }
-
-    .panel p:last-child {
-      margin-bottom: 0;
-    }
-
+    .panel p:first-of-type { margin-top: 0; }
+    .panel p:last-child { margin-bottom: 0; }
     .home-link {
       display: inline-block;
       margin-top: 12px;
       color: #983832;
       font-weight: bold;
     }
-
-    a {
-      color: #983832;
-    }
-
-    a:hover,
-    a:focus {
-      color: #173f5f;
-    }
-
-    a:focus-visible {
-      outline: 3px solid #173f5f;
-      outline-offset: 4px;
-    }
-
+    a { color: #983832; }
+    a:hover, a:focus { color: #173f5f; }
+    a:focus-visible { outline: 3px solid #173f5f; outline-offset: 4px; }
     footer {
       margin-top: 40px;
       padding-top: 20px;
@@ -123,81 +74,40 @@
       color: #52616b;
       font-size: 15px;
     }
-
-    @media screen and (max-width: 600px) {
-      body {
-        font-size: 17px;
-      }
-
-      main {
-        width: min(100% - 20px, 1200px);
-        padding: 28px 0;
-      }
-
-      .map-frame {
-        margin: 22px 0;
-        padding: 5px;
-      }
-
-      .panel {
-        margin: 22px 0;
-        padding: 21px;
-        border-left-width: 6px;
-      }
+    @media (max-width: 600px) {
+      body { font-size: 17px; }
+      main { width: calc(100% - 20px); padding: 28px 0; }
+      .map-frame { margin: 22px 0; padding: 5px; }
+      .panel { margin: 22px 0; padding: 21px; border-left-width: 6px; }
     }
   </style>
 </head>
-
 <body>
   <main>
     <header>
       <h1>Follow the Spider's Web</h1>
-
-      <h2>
-        A riverside adventure through Manchester and Salford
-      </h2>
+      <h2>A riverside adventure through Manchester and Salford</h2>
     </header>
 
     <div class="map-frame">
-      ./mancunianity-flows-map-web.jpg
+      <img src="mancunianity-flows-map-web.jpg" alt="Illustrated Mancunianity Flows walking map following the River Irwell between Manchester and Salford.">
     </div>
 
     <section class="panel" aria-labelledby="about-the-walk">
       <h3 id="about-the-walk">About the walk</h3>
-
-      <p>
-        Mancunianity Flows is a creative riverside walking experience
-        developed with our older local Weavers.
-      </p>
-
-      <p>
-        This page will soon include the downloadable map, audio stories,
-        original music, access information, schools resources and material
-        from the Mancunianity Archive.
-      </p>
-
-      <p>
-        <strong>Start and finish:</strong>
-        Aviva Studios and River Square.
-      </p>
-
-      <p>
-        The walk follows the River Irwell between Manchester and Salford,
-        crossing Prince's pedestrian bridge beneath the Ordsall Chord.
-      </p>
+      <p>Mancunianity Flows is a creative riverside walking experience developed with our older local Weavers.</p>
+      <p>This page will soon include the downloadable map, audio stories, original music, access information, schools resources and material from the Mancunianity Archive.</p>
+      <p><strong>Start and finish:</strong> Aviva Studios and River Square.</p>
+      <p>The walk follows the River Irwell between Manchester and Salford, crossing Prince's pedestrian bridge beneath the Ordsall Chord.</p>
     </section>
 
-    <p>
-      ../
-        Return to the Mancunianity homepage
-      </a>
-    </p>
+    <p><a class="home-link" href="../">Return to the Mancunianity homepage</a></p>
 
     <footer>
       Created and led by Nakib Narat.<br>
       Funded by Arts Council England.<br>
       Developed with the support of Aviva Studios, home of Factory International.<br>
-      © Nakib Narat 2026.
+      &copy; Nakib Narat 2026.
     </footer>
   </main>
 </body>
