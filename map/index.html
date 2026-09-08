@@ -16,6 +16,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      overflow-x: hidden;
+    }
+
     body {
       margin: 0;
       background-color: #f5efe2;
@@ -23,6 +27,7 @@
       font-family: Arial, Helvetica, sans-serif;
       font-size: 18px;
       line-height: 1.6;
+      overflow-wrap: break-word;
     }
 
     main {
@@ -48,11 +53,16 @@
     h3 {
       margin-top: 0;
       color: #173f5f;
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      line-height: 1.25;
     }
 
     .map-frame {
+      width: 100%;
+      height: auto;
       margin: 30px 0;
       padding: 10px;
+      overflow: visible;
       background-color: #ffffff;
       border-radius: 12px;
       box-shadow: 0 8px 24px rgba(23, 63, 95, 0.15);
@@ -61,16 +71,28 @@
     .map-frame img {
       display: block;
       width: 100%;
+      max-width: 100%;
       height: auto;
       border-radius: 7px;
     }
 
     .panel {
+      width: 100%;
+      height: auto;
       margin: 30px 0;
       padding: 26px;
+      overflow: visible;
       background-color: #ffffff;
       border-left: 8px solid #9a302f;
       border-radius: 12px;
+    }
+
+    .panel p:first-of-type {
+      margin-top: 0;
+    }
+
+    .panel p:last-child {
+      margin-bottom: 0;
     }
 
     .home-link {
@@ -89,6 +111,11 @@
       color: #173f5f;
     }
 
+    a:focus-visible {
+      outline: 3px solid #173f5f;
+      outline-offset: 4px;
+    }
+
     footer {
       margin-top: 40px;
       padding-top: 20px;
@@ -104,15 +131,18 @@
 
       main {
         width: min(100% - 20px, 1200px);
-        padding-top: 28px;
+        padding: 28px 0;
       }
 
       .map-frame {
+        margin: 22px 0;
         padding: 5px;
       }
 
       .panel {
+        margin: 22px 0;
         padding: 21px;
+        border-left-width: 6px;
       }
     }
   </style>
@@ -129,14 +159,15 @@
     </header>
 
     <div class="map-frame">
-      <img
-        src="./mancunianity-flows-map-web.jpg"
-        alt="Illustrated Mancunianity Flows walking map following the River Irwell between Manchester and Salford."
-      >
+      ./mancunianity-flows-map-web.jpg
     </div>
 
-    loped
-        with our older local Weavers.
+    <section class="panel" aria-labelledby="about-the-walk">
+      <h3 id="about-the-walk">About the walk</h3>
+
+      <p>
+        Mancunianity Flows is a creative riverside walking experience
+        developed with our older local Weavers.
       </p>
 
       <p>
