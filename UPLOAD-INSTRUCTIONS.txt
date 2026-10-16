@@ -1,0 +1,14 @@
+FINAL BEST-PRACTICE LEGACY + STORY TASTER UPDATE
+
+Upload the CONTENTS of this folder to the GitHub repository root on branch main.
+This update does not contain or replace CNAME.
+
+Commit message: Add final legacy resources and story tasters
+
+Includes:
+- permanent Stories & Learning navigation
+- eight full story tasters and three protected brief glimpses
+- resource standards, rights and spoiler policy
+- primary, secondary and community learning packs
+- all visual and environmental learning materials
+- updated sitemap, shared script and responsive/print styling
