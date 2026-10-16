@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://mancunianity.uk/sitemap.xml
