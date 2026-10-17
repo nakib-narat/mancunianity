@@ -1,14 +1,7 @@
-FINAL BEST-PRACTICE LEGACY + STORY TASTER UPDATE
+CLOUDFLARE ANALYTICS + PRIVACY UPDATE
 
 Upload the CONTENTS of this folder to the GitHub repository root on branch main.
-This update does not contain or replace CNAME.
+Commit message: Add private website analytics and update privacy notice
 
-Commit message: Add final legacy resources and story tasters
-
-Includes:
-- permanent Stories & Learning navigation
-- eight full story tasters and three protected brief glimpses
-- resource standards, rights and spoiler policy
-- primary, secondary and community learning packs
-- all visual and environmental learning materials
-- updated sitemap, shared script and responsive/print styling
+Files: script.js and privacy.html.
+This does not alter DNS, CNAME, hosting, design, event information or content pages.

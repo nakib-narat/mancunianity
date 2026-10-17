@@ -8,3 +8,14 @@ document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().get
   const walks=[...nav.querySelectorAll('a')].find(a=>a.getAttribute('href')==='walks.html');
   if(walks) walks.insertAdjacentElement('afterend',link); else nav.appendChild(link);
 })();
+
+
+// Cloudflare Web Analytics: aggregate website usage.
+(function(){
+  if (document.querySelector('script[data-cf-beacon]')) return;
+  const beacon=document.createElement('script');
+  beacon.type='module';
+  beacon.src='https://static.cloudflareinsights.com/beacon.min.js';
+  beacon.setAttribute('data-cf-beacon', '{"token":"df1b1ab518564dd49638f7cf85120946"}');
+  document.head.appendChild(beacon);
+})();
