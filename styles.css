@@ -32,3 +32,35 @@
   color: #202a28;
   text-shadow: none;
 }
+.hero {
+  display: block;
+  min-height: 0;
+  background: #fff8e9;
+  color: #173431;
+}
+
+.hero > img {
+  position: static;
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hero::after {
+  display: none;
+}
+
+.hero-copy,
+.hero .below-image {
+  position: static;
+  max-width: 1180px;
+  padding-top: 40px;
+  padding-bottom: 50px;
+  color: #173431;
+  text-shadow: none;
+}
+
+.hero .eyebrow {
+  color: #875500;
+}
