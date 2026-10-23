@@ -1,4 +1,9 @@
 User-agent: *
 Allow: /
+Disallow: /about/
+Disallow: /accessibility/
+Disallow: /contact/
+Disallow: /privacy/
+Disallow: /resources/
 
 Sitemap: https://mancunianity.uk/sitemap.xml
