@@ -1,0 +1,56 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Nav Fix</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; }
+    .site-nav ul, .nav-links ul, .menu ul, .nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 0.9rem;
+      margin: 0;
+      padding: 0;
+    }
+    .site-nav li, .nav-links li, .menu li, .nav li {
+      list-style: none;
+    }
+    .site-nav a, .nav-links a, .menu a, .nav a {
+      display: inline-block;
+      padding: 0.5rem 0.8rem;
+      border-radius: 0.35rem;
+      text-decoration: none;
+      color: #173431;
+      white-space: nowrap;
+      line-height: 1.3;
+      background: transparent;
+    }
+    .site-nav a:hover, .nav-links a:hover, .menu a:hover, .nav a:hover,
+    .site-nav a[aria-current="page"], .nav-links a[aria-current="page"], .menu a[aria-current="page"], .nav a[aria-current="page"] {
+      background: rgba(23, 63, 95, 0.08);
+    }
+    @media (max-width: 700px) {
+      .site-nav ul, .nav-links ul, .menu ul, .nav ul {
+        display: block;
+      }
+      .site-nav a, .nav-links a, .menu a, .nav a {
+        display: block;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">The Experience</a></li>
+      <li><a href="#">Christmas Walks</a></li>
+      <li><a href="#">Stories &amp; Learning</a></li>
+      <li><a href="#">Meet the People</a></li>
+      <li><a href="#">Families</a></li>
+      <li><a href="#">Access &amp; Booking</a></li>
+    </ul>
+  </nav>
+</body>
+</html>
