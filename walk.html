@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Walk the Spider's Web | Mancunianity Flows</title>
+<meta name="description" content="Take a guided, animated tour of the Mancunianity Flows souvenir map: eight stops along the River Irwell between Manchester and Salford, set to music.">
+<link rel="canonical" href="https://mancunianity.uk/walk.html">
+<link rel="stylesheet" href="styles.css?v=20261023">
+<link rel="stylesheet" href="walk.css?v=1">
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+<header class="header"><div class="wrap nav"><a class="brand" href="index.html">Mancunianity Flows<small>Mancunianity — the shared spirit, wit and resilience of Greater Manchester</small></a><nav class="nav-links" aria-label="Main navigation"><a href="index.html">Home</a><a href="experience.html">The Experience</a><a href="walks.html">Christmas Walks</a><a href="walk.html" aria-current="page">Virtual Walk</a><a href="stories-learning.html">Stories &amp; Learning</a><a href="people.html">Meet the People</a><a href="families.html">Families</a><a href="access.html">Access &amp; Booking</a></nav></div></header>
+<main id="main">
+<section class="wk-intro"><div class="wrap">
+<p class="eyebrow">A preview of the real walk</p>
+<h1>Walk the Spider’s Web</h1>
+<p class="wk-lead">Follow the route along the River Irwell stop by stop, from Aviva Studios, across the water into Salford and back again. Press <strong>Play the walk</strong> and turn the music on.</p>
+</div></section>
+
+<section class="wk-section"><div class="wrap">
+<div class="wk" id="walk" data-image-ratio="1.7769">
+  <div class="wk-stage" id="stage" tabindex="0" role="group" aria-label="Animated map of the walk. Use the left and right arrow keys to move between stops.">
+    <div class="wk-map" id="map"><div class="wk-drift"><img id="mapimg" src="images/spiders-web-map.jpg" width="1672" height="941" alt="Illustrated map of the River Irwell between Manchester and Salford, with a red route marked from Aviva Studios across the river and back, and eight numbered stops."></div></div>
+    <div class="wk-badge" id="badge" aria-hidden="true"></div>
+    <div class="wk-tint" aria-hidden="true"></div>
+  </div>
+
+  <div class="wk-panel">
+    <p class="wk-kicker" id="kicker"></p>
+    <div class="wk-copy" id="copy" aria-live="polite"></div>
+    <div class="wk-controls">
+      <button type="button" class="wk-btn" id="prev" aria-label="Previous stop">&larr; Back</button>
+      <button type="button" class="wk-btn wk-primary" id="play" aria-pressed="false">&#9654; Play the walk</button>
+      <button type="button" class="wk-btn" id="next" aria-label="Next stop">Next &rarr;</button>
+    </div>
+    <div class="wk-controls wk-secondary">
+      <button type="button" class="wk-btn wk-ghost" id="music" aria-pressed="false">&#9835; Music off</button>
+    </div>
+    <nav class="wk-dots" id="dots" aria-label="Stops"></nav>
+  </div>
+</div>
+
+<details class="wk-text" id="walktext" open>
+<summary>Read the whole walk as text</summary>
+<ol id="stops" class="wk-stops">
+  <li data-kind="intro" data-x="0.5" data-y="0.5" data-z="1" data-label="Map">
+    <h3>Follow the Spider’s Web</h3>
+    <p class="wk-where">A riverside adventure through Manchester and Salford</p>
+    <p>Meet Webster the Weaver, your spider guide: “I’ll help you find stories, connections and fun facts along the way. Let’s weave this journey together!”</p>
+    <p>The real walk is a gentle quarter mile with Aviva Studios at the start and finish. Ready? Press <strong>Next</strong>, or <strong>Play the walk</strong> to be guided.</p>
+  </li>
+  <li data-stop="1" data-x="0.15" data-y="0.9" data-z="3.2">
+    <h3>Aviva Studios and River Square</h3>
+    <p class="wk-where">Start and finish here</p>
+    <p>A green gathering place beside the Irwell. Goods once moved through this district. Today artists, audiences and ideas meet here.</p>
+    <p class="wk-prompt">What shape does Aviva Studios remind you of?</p>
+  </li>
+  <li data-stop="2" data-x="0.32" data-y="0.85" data-z="3.2">
+    <h3>The River Irwell</h3>
+    <p class="wk-where">The river that ties it all together</p>
+    <p>A 39-mile river flowing from the hills near Bacup to the Mersey and onward towards the sea. It has an industrial past and a living future. It is recovering, but still needs our care.</p>
+    <p class="wk-prompt">“Please look after my river,” says the fish.</p>
+  </li>
+  <li data-stop="3" data-x="0.40" data-y="0.62" data-z="2.5">
+    <h3>Bridges through time</h3>
+    <p class="wk-where">1830, 2017 and 2023</p>
+    <p><strong>Stephenson’s Railway Bridge, 1830.</strong> Part of the pioneering Liverpool and Manchester Railway, the world’s first steam-powered inter-urban railway.</p>
+    <p><strong>Ordsall Chord, 2017.</strong> A modern railway chord joining routes. Rust by design!</p>
+    <p><strong>Prince’s Pedestrian Bridge, 2023.</strong> Walk beneath the trains and over the river into Salford.</p>
+  </li>
+  <li data-stop="4" data-x="0.165" data-y="0.47" data-z="3">
+    <h3>Faucher’s diligent spider</h3>
+    <p class="wk-where">“Manchester, like a diligent spider, is placed in the centre of the web…” — Léon Faucher, 1844</p>
+    <p>In 1844, Léon Faucher imagined Manchester at the centre of a great web.</p>
+    <p class="wk-prompt">How many connections can you spot?</p>
+  </li>
+  <li data-stop="5" data-x="0.22" data-y="0.33" data-z="2.7">
+    <h3>Brick-lattice mystery and pineapple line</h3>
+    <p class="wk-where">The railway’s real horse power</p>
+    <p>These patterned bricks allowed air to circulate. The railway remembers the Pine Apple Inn that once stood on Water Street.</p>
+    <p class="wk-prompt">What does the pattern remind you of?</p>
+  </li>
+  <li data-stop="6" data-x="0.53" data-y="0.36" data-z="3.2">
+    <h3>Cross into Salford</h3>
+    <p class="wk-where">Manchester one way, Salford the other</p>
+    <p>Trains above. River below.</p>
+    <p class="wk-prompt">How many steps between two cities?</p>
+  </li>
+  <li data-stop="7" data-x="0.575" data-y="0.62" data-z="2.5">
+    <h3>Sit inside the web</h3>
+    <p class="wk-where">The terraces beside the river</p>
+    <p>These terraces name the canals and railways that connected towns and cities: Bridgewater Canal, Manchester Railway, Manchester, Bolton &amp; Bury Canal, and Manchester South Junction &amp; Altrincham Railway.</p>
+    <p class="wk-prompt">What did they carry? People, coal, cotton, food, letters, stories.</p>
+  </li>
+  <li data-stop="8" data-x="0.55" data-y="0.84" data-z="3.2">
+    <h3>Turn around here</h3>
+    <p class="wk-where">Back to where it began</p>
+    <p>Follow the thread back along the river to Aviva Studios, the start and finish of the walk. Inside there are toilets, refreshments and a warm, dry space.</p>
+  </li>
+  <li data-kind="outro" data-x="0.5" data-y="0.5" data-z="1" data-label="End">
+    <h3>You’ve followed the web</h3>
+    <p class="wk-where">Now walk it for real</p>
+    <p>The live audio-theatre walk runs on 19, 20 and 21 December 2026, with a seated musical finale beside the Irwell. Singing is optional, and everyone is welcome.</p>
+    <p class="wk-actions"><a class="wk-btn wk-primary" href="https://www.trybooking.com/uk/HEFF" target="_blank" rel="noopener noreferrer">Book tickets</a> <a class="wk-btn" href="access.html">Plan your visit</a> <a class="wk-btn" href="mancunianity-flows-souvenir-map.pdf">Download the souvenir map</a></p>
+  </li>
+</ol>
+</details>
+</div></section>
+</main>
+<footer class="footer"><div class="wrap"><div class="footergrid"><div><strong>Mancunianity Flows</strong><p>Stories, music and shared discovery along the River Irwell.</p></div><div><strong>Explore</strong><p><a href="walks.html">Christmas Walks</a><br><a href="access.html">Access &amp; Booking</a><br><a href="privacy.html">Privacy</a></p></div><div><strong>Contact</strong><p><a href="mailto:contact@mancunianity.uk">contact@mancunianity.uk</a></p></div></div><div class="support"><p><strong>Supported using public funding by Arts Council England.</strong><br>Developed with support from Aviva Studios, home of Factory International.</p><p class="small">Map illustration and text © Nakib Narat 2026.</p></div></div></footer>
+<script src="script.js"></script>
+<script src="walk.js?v=1"></script>
+</body>
+</html>
