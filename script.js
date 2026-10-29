@@ -9,6 +9,14 @@ document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().get
   if(walks) walks.insertAdjacentElement('afterend',link); else nav.appendChild(link);
 })();
 
+(function(){
+  const walks=document.querySelector('.header a[href="walks.html"]');
+  if(!walks || document.querySelector('.header a[href="walk.html"]')) return;
+  const link=document.createElement('a');
+  link.href='walk.html'; link.textContent='Virtual Walk';
+  walks.insertAdjacentElement('afterend',link);
+})();
+
 
 // Cloudflare Web Analytics: aggregate website usage.
 (function(){
