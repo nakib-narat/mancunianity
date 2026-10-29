@@ -161,20 +161,19 @@
     }, 120);
   });
 
-  /* Music: plays audio/walk-theme.mp3 if that file exists, otherwise a gentle
-     generated soundtrack whose key and mood change from stop to stop. */
+  /* Plays the supplied theme if present, otherwise a warm, major-key soundtrack. */
   const music = (function () {
     const MOODS = [
-      { root: 50, scale: [0, 2, 4, 7, 9] },
-      { root: 55, scale: [0, 2, 4, 7, 9] },
-      { root: 52, scale: [0, 3, 5, 7, 10] },
-      { root: 57, scale: [0, 2, 4, 7, 9] },
-      { root: 50, scale: [0, 3, 5, 7, 10] },
-      { root: 48, scale: [0, 2, 4, 7, 9] },
-      { root: 55, scale: [0, 2, 4, 7, 9] },
-      { root: 52, scale: [0, 2, 4, 7, 9] },
-      { root: 55, scale: [0, 2, 4, 7, 9] },
-      { root: 50, scale: [0, 2, 4, 7, 9] }
+      { root: 60, scale: [0, 2, 4, 7, 9, 12] },
+      { root: 67, scale: [0, 2, 4, 7, 9, 12] },
+      { root: 65, scale: [0, 2, 4, 7, 9, 12] },
+      { root: 62, scale: [0, 2, 4, 7, 9, 12] },
+      { root: 69, scale: [0, 2, 4, 7, 9, 12] },
+      { root: 60, scale: [0, 2, 4, 7, 9, 12] },
+      { root: 65, scale: [0, 2, 4, 7, 9, 12] },
+      { root: 67, scale: [0, 2, 4, 7, 9, 12] },
+      { root: 62, scale: [0, 2, 4, 7, 9, 12] },
+      { root: 60, scale: [0, 2, 4, 7, 9, 12] }
     ];
     const AudioCtx = window.AudioContext || window.webkitAudioContext;
     let ctx = null;
@@ -196,11 +195,11 @@
       master.gain.value = 0;
       master.connect(ctx.destination);
       const delay = ctx.createDelay(1);
-      delay.delayTime.value = 0.42;
+      delay.delayTime.value = 0.34;
       const feedback = ctx.createGain();
-      feedback.gain.value = 0.38;
+      feedback.gain.value = 0.2;
       send = ctx.createGain();
-      send.gain.value = 0.5;
+      send.gain.value = 0.24;
       send.connect(delay);
       delay.connect(feedback);
       feedback.connect(delay);
@@ -212,17 +211,20 @@
       const bus = ctx.createGain();
       const filter = ctx.createBiquadFilter();
       filter.type = 'lowpass';
-      filter.frequency.value = 900;
+      filter.frequency.value = 1400;
       bus.gain.setValueAtTime(0, t);
-      bus.gain.linearRampToValueAtTime(0.16, t + 3);
+      bus.gain.linearRampToValueAtTime(0.13, t + 4);
       bus.connect(filter);
       filter.connect(master);
-      const oscs = [0, 7, 12, 16].map((semi, i) => {
+      const oscs = [0, 4, 7, 11, 14].map((semi, i) => {
         const o = ctx.createOscillator();
-        o.type = i === 0 ? 'sine' : 'triangle';
-        o.frequency.value = hz(m.root + semi - (i === 0 ? 12 : 0));
+        const voice = ctx.createGain();
+        o.type = i === 0 || i === 2 ? 'sine' : 'triangle';
+        o.frequency.value = hz(m.root + semi);
         o.detune.value = (i - 1.5) * 4;
-        o.connect(bus);
+        voice.gain.value = [0.52, 0.18, 0.24, 0.12, 0.1][i];
+        o.connect(voice);
+        voice.connect(bus);
         o.start(t);
         return o;
       });
@@ -234,19 +236,19 @@
       const t = ctx.currentTime;
       p.bus.gain.cancelScheduledValues(t);
       p.bus.gain.setValueAtTime(p.bus.gain.value, t);
-      p.bus.gain.linearRampToValueAtTime(0, t + 2.5);
-      p.oscs.forEach(o => o.stop(t + 2.6));
+      p.bus.gain.linearRampToValueAtTime(0, t + 3.2);
+      p.oscs.forEach(o => o.stop(t + 3.3));
     }
 
     function pluck(freq) {
       const t = ctx.currentTime;
       const g = ctx.createGain();
       g.gain.setValueAtTime(0, t);
-      g.gain.linearRampToValueAtTime(0.2, t + 0.01);
-      g.gain.exponentialRampToValueAtTime(0.0008, t + 2.2);
+      g.gain.linearRampToValueAtTime(0.12, t + 0.02);
+      g.gain.exponentialRampToValueAtTime(0.0008, t + 2.8);
       g.connect(master);
       g.connect(send);
-      [[1, 'sine', 1], [2, 'triangle', 0.25]].forEach(([mult, type, amp]) => {
+      [[1, 'sine', 1], [2, 'sine', 0.14], [3, 'triangle', 0.035]].forEach(([mult, type, amp]) => {
         const o = ctx.createOscillator();
         const og = ctx.createGain();
         o.type = type;
@@ -255,16 +257,17 @@
         o.connect(og);
         og.connect(g);
         o.start(t);
-        o.stop(t + 2.3);
+        o.stop(t + 2.9);
       });
     }
 
-    let pos = 2;
+    const phrase = [0, 1, 2, 3, 2, 1, 4, 3, 2, 4, 5, 4];
+    let phrasePos = 0;
     function arp() {
-      if (Math.random() < 0.3) return;
-      pos = Math.max(0, Math.min(mood.scale.length * 2 - 1, pos + [-2, -1, 1, 2][Math.floor(Math.random() * 4)]));
-      const octave = Math.floor(pos / mood.scale.length);
-      const degree = mood.scale[pos % mood.scale.length];
+      const position = phrase[phrasePos % phrase.length];
+      const octave = phrasePos % 4 === 2 ? 1 : 0;
+      phrasePos += 1;
+      const degree = mood.scale[position];
       pluck(hz(mood.root + 24 + degree + octave * 12));
     }
 
@@ -273,9 +276,9 @@
       if (!ctx) return;
       ctx.resume();
       master.gain.cancelScheduledValues(ctx.currentTime);
-      master.gain.linearRampToValueAtTime(0.7, ctx.currentTime + 2);
+      master.gain.linearRampToValueAtTime(0.58, ctx.currentTime + 3);
       if (!pad) pad = startPad(mood);
-      if (!arpTimer) arpTimer = setInterval(arp, 560);
+      if (!arpTimer) arpTimer = setInterval(arp, 760);
     }
 
     function stopSynth() {
