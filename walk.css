@@ -27,6 +27,8 @@
 @keyframes wk-fade{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
 
 .wk-controls{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.wk-music-credit,.wk-music-status{margin:8px 0 0;font-size:.86rem;color:#52616a}
+.wk-music-status:empty{display:none}
 .wk-btn{font:inherit;font-weight:700;cursor:pointer;display:inline-block;padding:11px 18px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--ink);text-decoration:none}
 .wk-btn:hover{background:#eef6f4}
 .wk-btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
