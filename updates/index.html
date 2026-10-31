@@ -16,12 +16,6 @@
     .narrow { width:min(780px, 100%); margin-inline:auto; }
     .skip { position:absolute; left:-10000px; top:auto; width:1px; height:1px; overflow:hidden; }
     .skip:focus { position:fixed; left:1rem; top:1rem; width:auto; height:auto; padding:.65rem .9rem; background:#fff; z-index:1000; border:2px solid var(--ink); }
-    .site-header { background:var(--ink); color:#fff; padding:1rem 0; }
-    .header-inner { display:flex; align-items:center; justify-content:space-between; gap:1rem; flex-wrap:wrap; }
-    .brand { color:#fff; text-decoration:none; font-family:Georgia, serif; font-size:1.2rem; font-weight:700; }
-    .menu { display:flex; flex-wrap:wrap; gap:.35rem 1rem; }
-    .menu a { color:#fff; text-decoration:none; padding:.35rem 0; }
-    .menu a[aria-current="page"] { border-bottom:3px solid var(--gold); }
     .page-hero { padding:3.25rem 0 1.75rem; }
     .eyebrow { margin:0 0 .5rem; text-transform:uppercase; letter-spacing:.11em; font-size:.83rem; font-weight:700; color:var(--blue); }
     h1, h2, h3 { font-family:Georgia, serif; line-height:1.15; color:var(--ink); }
@@ -46,8 +40,6 @@
     .support { border-top:1px solid rgba(255,255,255,.25); margin-top:1.5rem; padding-top:1.5rem; }
     .small { font-size:.88rem; }
     @media (max-width:760px) {
-      .header-inner { align-items:flex-start; }
-      .menu { width:100%; gap:.25rem .8rem; }
       .page-hero { padding-top:2.25rem; }
       .footer-grid { grid-template-columns:1fr; }
     }
@@ -55,21 +47,7 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to main content</a>
-  <header class="site-header">
-    <div class="wrap header-inner">
-      <a class="brand" href="/">Mancunianity Flows</a>
-      <nav class="menu" aria-label="Primary navigation">
-        <a href="/">Home</a>
-        <a href="/experience.html">Experience</a>
-        <a href="/walks.html">Walks</a>
-        <a href="/stories-learning.html">Stories &amp; Learning</a>
-        <a href="/resource-standards.html">Resources</a>
-        <a href="/access.html">Access</a>
-        <a href="/updates/" aria-current="page">Updates</a>
-        <a href="/contact.html">Contact</a>
-      </nav>
-    </div>
-  </header>
+  <header class="header"><div class="wrap nav"><a class="brand" href="/">Mancunianity Flows<small>Mancunianity — the shared spirit, wit and resilience of Greater Manchester</small></a><nav aria-label="Main navigation" class="nav-links"><a href="/">Home</a><a href="/experience.html">The Experience</a><a href="/walks.html">Christmas Walks</a><a href="/stories-learning.html">Stories &amp; Learning</a><a href="/people.html">Meet the People</a><a href="/families.html">Families</a><a href="/access.html">Access &amp; Booking</a></nav></div></header>
 
   <main id="main">
     <section class="page-hero">
