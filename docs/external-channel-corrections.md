@@ -12,6 +12,10 @@ before" and never shorten to "times: 10:00 and 13:00".
 - Children and young people aged 4–17: £5.
 - Adult £15 · Senior aged 65+ £12 · Family bundle: £38 for two adults and two children or young people aged 4–17. Children aged 3 and under attend free but require a separate free ticket · Access companion: free, but a free ticket must be reserved.
 
+"Separate free ticket" means a separate ticket type (aged 3 and under, £0)
+added to the same booking as the rest of the party, not a separate transaction.
+Configure TryBooking so the free ticket type can be selected in the same order.
+
 ## TryBooking timing wording
 
 - Morning: arrive from 10:00 for gathering and check-in; the walk departs at 10:30.

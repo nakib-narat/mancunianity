@@ -51,6 +51,8 @@ Last checked against the repository: 2 November 2026.
 - **Child aged 3 and under:** Free, but a free ticket must be reserved for
   every child (safety, security, capacity management and accurate attendance
   count). Use "aged 3 and under", never "under 3".
+- **Free tickets:** A "separate free ticket" is a separate ticket type added to
+  the same booking, not a separate transaction.
 - **Access companion:** Free, but a free ticket must be reserved
 - **Booking fees:** No additional booking fees
 - **Booking URL:** https://www.trybooking.com/uk/HEFF
