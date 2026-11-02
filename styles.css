@@ -43,6 +43,8 @@
 .home-booking .lead{max-width:820px;font-size:clamp(1.05rem,2vw,1.3rem)}
 .home-booking-facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin:20px 0 8px;font-weight:700}
 .home-booking-facts span{display:inline-block}
+.ticket-summary{display:flex;flex-wrap:wrap;gap:6px 20px;margin:12px 0;padding:0;list-style:none;font-weight:700}
+@media (max-width:700px){.ticket-summary{display:grid;gap:4px}}
 .home-booking .small{margin:8px 0}
 @media (max-width:700px){.home-booking{padding:32px 0}.home-booking-facts{display:grid;gap:6px}}
 .visit-steps{display:grid;gap:20px;list-style:none;padding:0;margin:28px 0 0}

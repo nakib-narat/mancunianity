@@ -13,9 +13,13 @@ Last checked against the repository: 2 November 2026.
   headphones, followed by a 15-minute live musical finale. The experience
   includes about 50 minutes of walking and lasts about 65 minutes overall.
 - **Dates:** Saturday 19, Sunday 20 and Monday 21 December 2026
-- **Departures:** 10:30 and 13:30 each day
-- **Arrival:** Please arrive 20 minutes before the booked departure (10:10 or
-  13:10). The exact time check-in opens is **Confirmation required**.
+- **Departures (walk departs):** 10:30 and 13:30 each day
+- **Gathering and check-in begin:** 10:00 (morning) and 13:00 (afternoon)
+- **Arrival:** Visitors must arrive at the gathering time, 30 minutes before
+  the walk departs. Walks leave promptly. Do not describe 10:00 or 13:00 as
+  walk start times, and do not describe arrival as 20 minutes before departure.
+- **Gathering period:** Allows time for ticket checking, welcome, headset fitting
+  and the route briefing.
 - **Approximate finish:** 11:35 for the 10:30 departure; 14:35 for the 13:30
   departure. Allow around 90 minutes in total for arrival, the experience and
   departure.
@@ -37,11 +41,14 @@ Last checked against the repository: 2 November 2026.
 
 - **Adult:** £15
 - **Senior, aged 65+:** £12
-- **Child, over 3 through age 17:** £5
-- **Family ticket:** £38 for two adults and two children aged over 3 through
-  age 17
-- **Child aged 3 and under:** Free; a ticket is required
-- **Access companion:** Free
+- **Child, aged 4–17 inclusive:** £5
+- **Family bundle:** £38 for two adults and two children or young people.
+  **Owner decision required:** whether the bundle may include children aged 3
+  and under is not approved; the website does not state it.
+- **Child aged 3 and under:** Free, but a free ticket must be reserved for
+  every child (safety, security, capacity management and accurate attendance
+  count). Use "aged 3 and under", never "under 3".
+- **Access companion:** Free, but a free ticket must be reserved
 - **Booking fees:** No additional booking fees
 - **Booking URL:** https://www.trybooking.com/uk/HEFF
 
@@ -63,6 +70,12 @@ describing a booking as complete.
 ## Contact
 
 - **Email:** contact@mancunianity.uk
+
+## Machine-readable data and validation
+
+`event-data.json` mirrors these facts (separate gathering and departure fields).
+`python3 scripts/check-event-facts.py [site_root]` validates public pages and
+structured data; run it against the source and any generated output.
 
 ## Publication gate
 
