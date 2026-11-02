@@ -16,8 +16,11 @@
   "senior_minimum_age": 65,
   "senior_price_gbp": 12,
   "family_bundle_price_gbp": 38,
-  "family_bundle_composition": "two adults and two children or young people",
-  "family_bundle_includes_free_age_children": "OWNER DECISION REQUIRED",
+  "family_bundle_composition": "two adults and two children or young people aged 4-17",
+  "family_bundle_child_places_min_age": 4,
+  "family_bundle_child_places_max_age": 17,
+  "family_bundle_counts_free_age_children": false,
+  "free_age_children_in_bundle_need_separate_free_ticket": true,
   "access_companion_price_gbp": 0,
   "access_companion_ticket_required": true,
   "booking_url": "https://www.trybooking.com/uk/HEFF"

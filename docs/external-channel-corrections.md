@@ -10,7 +10,7 @@ before" and never shorten to "times: 10:00 and 13:00".
 
 - Children aged 3 and under: free, but a free ticket must be booked for every child.
 - Children and young people aged 4–17: £5.
-- Adult £15 · Senior aged 65+ £12 · Family bundle £38 (two adults and two children or young people) · Access companion: free, but a free ticket must be reserved.
+- Adult £15 · Senior aged 65+ £12 · Family bundle: £38 for two adults and two children or young people aged 4–17. Children aged 3 and under attend free but require a separate free ticket · Access companion: free, but a free ticket must be reserved.
 
 ## TryBooking timing wording
 
@@ -34,8 +34,8 @@ wording.
 
 ## Open owner decisions
 
-- Whether the £38 family bundle may include children aged 3 and under is not
-  approved. The website says only "two adults and two children or young people".
-  Confirm and apply the same rule on TryBooking.
+- Resolved: the family bundle covers two adults and two children or young
+  people aged 4–17. Children aged 3 and under are not paid child places in the
+  bundle; each needs a separate free ticket. Apply this rule on TryBooking.
 - The earlier ticket-listing postcode and other items marked **Confirmation
   required** in `APPROVED-EVENT-FACTS.md` remain unresolved.

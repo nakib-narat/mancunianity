@@ -42,9 +42,12 @@ Last checked against the repository: 2 November 2026.
 - **Adult:** £15
 - **Senior, aged 65+:** £12
 - **Child, aged 4–17 inclusive:** £5
-- **Family bundle:** £38 for two adults and two children or young people.
-  **Owner decision required:** whether the bundle may include children aged 3
-  and under is not approved; the website does not state it.
+- **Family bundle:** £38 for two adults and two children or young people aged
+  4–17. Children aged 3 and under are not counted as one of the two paid child
+  places; they attend free but require a separate free ticket. Public wording:
+  "Family bundle: £38 for two adults and two children or young people aged
+  4–17. Children aged 3 and under attend free but require a separate free
+  ticket."
 - **Child aged 3 and under:** Free, but a free ticket must be reserved for
   every child (safety, security, capacity management and accurate attendance
   count). Use "aged 3 and under", never "under 3".

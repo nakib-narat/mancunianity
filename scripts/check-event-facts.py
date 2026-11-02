@@ -32,10 +32,10 @@ PROHIBITED = [
 ]
 
 SALES_PAGES = {
-    "index.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5"],
-    "walks.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5"],
-    "access.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5"],
-    "families.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5"],
+    "index.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "separate free ticket"],
+    "walks.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "separate free ticket"],
+    "access.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "separate free ticket"],
+    "families.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "separate free ticket"],
     "experience.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes"],
 }
 
@@ -81,7 +81,7 @@ def check_structured_data(page, html, data):
                 "Adult": "15",
                 "Senior aged 65+": "12",
                 "Child aged 4-17": "5",
-                "Family bundle (two adults and two children or young people)": "38",
+                "Family bundle (two adults and two children or young people aged 4-17; children aged 3 and under need a separate free ticket)": "38",
                 "Child aged 3 and under (free; free ticket must be reserved)": "0",
                 "Access companion": "0",
             }
@@ -110,6 +110,10 @@ def main():
             m = re.search(pattern, scan, re.I)
             if m:
                 fail(rel, f"prohibited wording ({label}): ...{scan[max(0, m.start()-30):m.end()+30]}...")
+        for m in re.finditer(r"family (?:bundle|ticket)", text, re.I):
+            window = text[m.start(): m.end() + 220]
+            if re.search(r"£\s?38", window) and not re.search(r"4\s*[–-]\s*17", window):
+                fail(rel, f"unqualified family bundle (no 'aged 4–17'): ...{window[:140]}...")
         if rel in SALES_PAGES:
             low = text.lower()
             for needle in SALES_PAGES[rel]:
