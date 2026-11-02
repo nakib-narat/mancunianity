@@ -20,7 +20,8 @@
   "family_bundle_child_places_min_age": 4,
   "family_bundle_child_places_max_age": 17,
   "family_bundle_counts_free_age_children": false,
-  "free_age_children_in_bundle_need_separate_free_ticket": true,
+  "free_age_children_ticket_in_same_booking": true,
+  "same_booking_trybooking_behaviour_verified": false,
   "access_companion_price_gbp": 0,
   "access_companion_ticket_required": true,
   "booking_url": "https://www.trybooking.com/uk/HEFF"

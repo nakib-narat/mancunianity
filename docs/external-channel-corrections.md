@@ -10,11 +10,13 @@ before" and never shorten to "times: 10:00 and 13:00".
 
 - Children aged 3 and under: free, but a free ticket must be booked for every child.
 - Children and young people aged 4–17: £5.
-- Adult £15 · Senior aged 65+ £12 · Family bundle: £38 for two adults and two children or young people aged 4–17. Children aged 3 and under attend free but require a separate free ticket · Access companion: free, but a free ticket must be reserved.
+- Adult £15 · Senior aged 65+ £12 · Family bundle: £38 for two adults and two children or young people aged 4–17. Children aged 3 and under attend free, but each child must be included in the same booking using a free ticket · Access companion: free, but a free ticket must be reserved.
 
-"Separate free ticket" means a separate ticket type (aged 3 and under, £0)
-added to the same booking as the rest of the party, not a separate transaction.
-Configure TryBooking so the free ticket type can be selected in the same order.
+Owner-approved meaning: a child aged 3 and under needs an individual free ticket
+type selected in the same booking transaction; the visitor must not need a second
+booking. **Unverified:** TryBooking support for this (one order containing adult,
+child aged 4–17 and aged-3-and-under free tickets) has not been tested. Verify and
+configure it before publishing; if it cannot be done, change the website wording.
 
 ## TryBooking timing wording
 
@@ -40,6 +42,6 @@ wording.
 
 - Resolved: the family bundle covers two adults and two children or young
   people aged 4–17. Children aged 3 and under are not paid child places in the
-  bundle; each needs a separate free ticket. Apply this rule on TryBooking.
+  bundle; each needs a free ticket in the same booking. Apply this rule on TryBooking.
 - The earlier ticket-listing postcode and other items marked **Confirmation
   required** in `APPROVED-EVENT-FACTS.md` remain unresolved.

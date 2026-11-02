@@ -28,14 +28,15 @@ PROHIBITED = [
     (r"20\s+minutes\s+(?:before|early)", "20-minute arrival wording"),
     (r"\b(?:starts?|walks?|departs?|departures?|performances?)\s*(?:at|:|-|–)?\s*(?:10:00|13:00|10\.00|13\.00|10\s?am|1\s?pm)\b", "gathering time presented as walk departure"),
     (r"\b(?:10:00|13:00)\s+(?:departure|walk departs|start)\b", "gathering time presented as walk departure"),
+    (r"separate free ticket", "ambiguous 'separate free ticket' wording"),
     (r"booked start time", "ambiguous 'booked start time' arrival wording"),
 ]
 
 SALES_PAGES = {
-    "index.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "separate free ticket"],
-    "walks.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "separate free ticket"],
-    "access.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "separate free ticket"],
-    "families.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "separate free ticket"],
+    "index.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "must be included in the same booking using a free ticket"],
+    "walks.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "must be included in the same booking using a free ticket"],
+    "access.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "must be included in the same booking using a free ticket"],
+    "families.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "must be included in the same booking using a free ticket"],
     "experience.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes"],
 }
 
@@ -81,7 +82,7 @@ def check_structured_data(page, html, data):
                 "Adult": "15",
                 "Senior aged 65+": "12",
                 "Child aged 4-17": "5",
-                "Family bundle (two adults and two children or young people aged 4-17; children aged 3 and under need a separate free ticket)": "38",
+                "Family bundle (two adults and two children or young people aged 4-17; children aged 3 and under need a free ticket in the same booking)": "38",
                 "Child aged 3 and under (free; free ticket must be reserved)": "0",
                 "Access companion": "0",
             }
