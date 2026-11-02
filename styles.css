@@ -38,3 +38,22 @@
 .sticky-book{position:fixed;left:0;right:0;bottom:0;z-index:50;display:flex;gap:16px;align-items:center;justify-content:center;padding:10px 16px;background:var(--paper);border-top:2px solid var(--gold);box-shadow:0 -4px 14px rgba(0,0,0,.12)}
 .sticky-book span{font-weight:700}
 @media (max-width:700px){.sticky-book span{font-size:.9rem}}
+.home-booking{padding:42px 0 36px;background:linear-gradient(120deg,#fff8e9,#e8f3f0)}
+.home-booking h1{max-width:900px;font-size:clamp(2.2rem,4.6vw,4rem)}
+.home-booking .lead{max-width:820px;font-size:clamp(1.05rem,2vw,1.3rem)}
+.home-booking-facts{display:flex;flex-wrap:wrap;gap:8px 20px;margin:20px 0 8px;font-weight:700}
+.home-booking-facts span{display:inline-block}
+.home-booking .small{margin:8px 0}
+@media (max-width:700px){.home-booking{padding:32px 0}.home-booking-facts{display:grid;gap:6px}}
+.visit-steps{display:grid;gap:20px;list-style:none;padding:0;margin:28px 0 0}
+.visit-step{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:24px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--paper)}
+.visit-step:nth-child(even)>div:first-child{order:2}
+.visit-step figure{margin:0}
+.visit-step figure img{display:block;width:100%;height:auto;max-height:360px;object-fit:cover;border-radius:12px}
+.visit-step figure figcaption{margin-top:8px;font-size:.88rem;color:#48635f}
+.visit-step h3{margin:0 0 10px}
+.visit-step p{margin:0 0 10px}
+.visit-step .step-number{margin:0 0 8px;color:#875500;font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.visit-step .illustration-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(90px,.55fr);align-items:center;gap:14px}
+.visit-step .illustration-pair img{max-height:260px}
+@media (max-width:700px){.visit-step{grid-template-columns:1fr;padding:16px}.visit-step:nth-child(even)>div:first-child{order:initial}.visit-step .illustration-pair{grid-template-columns:minmax(0,1fr) minmax(80px,.5fr)}}
