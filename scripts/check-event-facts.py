@@ -29,6 +29,9 @@ PROHIBITED = [
     (r"\b(?:starts?|walks?|departs?|departures?|performances?)\s*(?:at|:|-|–)?\s*(?:10:00|13:00|10\.00|13\.00|10\s?am|1\s?pm)\b", "gathering time presented as walk departure"),
     (r"\b(?:10:00|13:00)\s+(?:departure|walk departs|start)\b", "gathering time presented as walk departure"),
     (r"separate free ticket", "ambiguous 'separate free ticket' wording"),
+    (r"separate (?:transaction|booking)", "free child ticket implied to need a separate transaction"),
+    (r"(?:confirmation required|owner decision)", "unresolved owner-decision text on a public page"),
+    (r"\b(?:10:10|13:10)\b", "10:10/13:10 presented as gathering time"),
     (r"booked start time", "ambiguous 'booked start time' arrival wording"),
 ]
 
@@ -115,6 +118,8 @@ def main():
             window = text[m.start(): m.end() + 220]
             if re.search(r"£\s?38", window) and not re.search(r"4\s*[–-]\s*17", window):
                 fail(rel, f"unqualified family bundle (no 'aged 4–17'): ...{window[:140]}...")
+        if rel in SALES_PAGES and "family bundle" in text.lower() and "require their own free ticket within the same booking" not in text and rel != "index.html":
+            fail(rel, "full approved family-bundle wording missing")
         if rel in SALES_PAGES:
             low = text.lower()
             for needle in SALES_PAGES[rel]:

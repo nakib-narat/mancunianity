@@ -45,14 +45,15 @@ Last checked against the repository: 2 November 2026.
 - **Family bundle:** £38 for two adults and two children or young people aged
   4–17. Children aged 3 and under are not counted as one of the two paid child
   places. Public wording: "Family bundle: £38 for two adults and two children or
-  young people aged 4–17. Children aged 3 and under attend free, but each child must be included in the same booking using a free ticket. They do not count as one of the family bundle’s two child places."
+  young people aged 4–17. Children aged 3 and under attend free but require their own free ticket within the same booking."
 - **Child aged 3 and under:** Free, but a free ticket must be reserved for
   every child (safety, security, capacity management and accurate attendance
   count). Use "aged 3 and under", never "under 3".
 - **Free tickets:** A child aged 3 and under needs an individual free ticket type
-  selected within the same booking transaction (no second booking). **Platform
-  behaviour not yet verified:** TryBooking support for one order containing adult,
-  child 4–17 and aged-3-and-under tickets requires owner verification.
+  selected within the same booking (no second transaction). Public wording:
+  "Children aged 3 and under attend free, but each child must be included in the same booking using a free ticket. They do not count as one of the family bundle’s two child places."
+  **Verified by owner:** TryBooking allows adult, senior 65+, child 4–17, aged 3
+  and under, family bundle and access-companion tickets in the same booking.
 - **Access companion:** Free, but a free ticket must be reserved
 - **Booking fees:** No additional booking fees
 - **Booking URL:** https://www.trybooking.com/uk/HEFF
