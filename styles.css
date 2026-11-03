@@ -47,6 +47,20 @@
 @media (max-width:700px){.ticket-summary{display:grid;gap:4px}}
 .home-booking .small{margin:8px 0}
 @media (max-width:700px){.home-booking{padding:32px 0}.home-booking-facts{display:grid;gap:6px}}
+.home-descriptor{margin:0 0 10px;font-size:1.1rem}
+.home-date{margin:18px 0 8px}
+.home-time-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:16px 0;padding:14px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.home-time-grid h2{margin:0 0 8px;font-size:1.25rem}
+.home-time-grid p{margin:4px 0}
+.home-quickfacts{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 24px;margin:18px 0}
+.home-quickfacts dt{font-weight:800}
+.home-quickfacts dd{margin:0}
+.home-reassurance{margin:14px 0;font-weight:800}
+.home-tickets{padding-top:48px;padding-bottom:48px}
+.home-tickets .ticket-summary{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 24px}
+a:focus-visible,button:focus-visible,audio:focus-visible{outline:3px solid #875500;outline-offset:3px}
+@media (max-width:700px){.home-quickfacts,.home-tickets .ticket-summary{grid-template-columns:1fr}}
+@media (max-width:520px){.home-booking .actions{display:grid;grid-template-columns:1fr}.home-booking .actions .button{width:100%;text-align:center}}
 .visit-steps{display:grid;gap:20px;list-style:none;padding:0;margin:28px 0 0}
 .visit-step{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:24px;padding:22px;border:1px solid var(--line);border-radius:18px;background:var(--paper)}
 .visit-step:nth-child(even)>div:first-child{order:2}
@@ -58,4 +72,35 @@
 .visit-step .step-number{margin:0 0 8px;color:#875500;font-size:.8rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .visit-step .illustration-pair{display:grid;grid-template-columns:minmax(0,1fr) minmax(90px,.55fr);align-items:center;gap:14px}
 .visit-step .illustration-pair img{max-height:260px}
+.access-layout{display:grid;grid-template-columns:minmax(210px,280px) minmax(0,1fr);align-items:start;gap:40px}
+.nav .brand,.nav .brand small{white-space:normal}
+.access-index{position:sticky;top:16px;padding:20px;border:1px solid var(--line);background:var(--mist)}
+.access-index h2{font-size:1.35rem}
+.access-index ol{margin:0;padding-left:1.3rem}
+.access-index li{margin:.45rem 0}
+.access-content{min-width:0;max-width:760px}
+.access-content>section{padding:0 0 28px;margin:0 0 28px;border-bottom:1px solid var(--line);scroll-margin-top:20px}
+.access-content h2{font-size:clamp(1.5rem,3vw,2rem)}
+.access-content p,.access-content ul{max-width:72ch}
+.access-content address{font-style:normal}
+.access-meeting-photo{margin:20px 0}
+.access-meeting-photo img{width:100%;height:auto;border-radius:12px}
+.access-meeting-photo figcaption{margin-top:8px;font-size:.9rem}
+.access-booking{padding:22px;border:1px solid var(--line);background:var(--mist)}
+@media (max-width:800px){.access-layout{grid-template-columns:1fr;gap:24px}.access-index{position:static}.access-index ol{columns:2;column-gap:24px}}
+@media (max-width:480px){.access-index ol{columns:1}}
 @media (max-width:700px){.visit-step{grid-template-columns:1fr;padding:16px}.visit-step:nth-child(even)>div:first-child{order:initial}.visit-step .illustration-pair{grid-template-columns:minmax(0,1fr) minmax(80px,.5fr)}}
+@media print{
+  body{background:#fff;color:#000;font-size:11pt}
+  .header,.footer,.skip,.access-index,.actions{display:none!important}
+  .pagehero,.section,.section.white,.section.mist{padding:0!important;background:#fff!important}
+  .wrap,.section .wrap{max-width:none;padding:0}
+  h1{font-size:24pt}
+  h2{font-size:16pt}
+  a{color:#000;text-decoration:underline}
+  .access-layout{display:block}
+  .access-content{max-width:none}
+  .access-content>section,.access-meeting-photo,figure{break-inside:avoid}
+  .access-content>section{margin-bottom:14pt;padding-bottom:10pt}
+  .access-meeting-photo img{max-width:420px}
+}
