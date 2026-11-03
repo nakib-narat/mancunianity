@@ -35,6 +35,18 @@ PROHIBITED = [
     (r"booked start time", "ambiguous 'booked start time' arrival wording"),
 ]
 
+PUBLIC_LANGUAGE_PROHIBITED = [
+    (r"\bowner(?:['’]s)?\b", "internal owner reference in public page"),
+    (r"\bconfirmation required\b", "internal confirmation placeholder in public page"),
+    (r"\bawaiting approval\b", "internal approval placeholder in public page"),
+    (r"\b(?:TODO|TBC|TK|FIXME)\b", "unresolved placeholder in public page"),
+    (r"\bben\s+(?:the\s+)?sounds?\b", "known 'ben sounds' copy error in public page"),
+    (
+        r"\bexperiences\s+that\s+bend\s+history,\s*music\s+and\s+memory\b",
+        "known 'bend history' copy error in public page",
+    ),
+]
+
 SALES_PAGES = {
     "index.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "must be included in the same booking using a free ticket"],
     "walks.html": ["10:00", "10:30", "13:00", "13:30", "30 minutes", "aged 3 and under", "free ticket", "aged 4–17", "£5", "must be included in the same booking using a free ticket"],
@@ -48,6 +60,13 @@ errors = []
 
 def fail(page, msg):
     errors.append(f"{page}: {msg}")
+
+
+def check_public_language(page, content):
+    for pattern, label in PUBLIC_LANGUAGE_PROHIBITED:
+        m = re.search(pattern, content, re.I)
+        if m:
+            fail(page, f"prohibited public language ({label}): ...{content[max(0, m.start()-30):m.end()+30]}...")
 
 
 def visible_text(html):
@@ -110,6 +129,7 @@ def main():
         html = path.read_text(encoding="utf-8")
         text = visible_text(html)
         scan = text + " " + " ".join(re.findall(r'(?is)<script type="application/ld\+json">(.*?)</script>', html))
+        check_public_language(rel, html)
         for pattern, label in PROHIBITED:
             m = re.search(pattern, scan, re.I)
             if m:
@@ -127,6 +147,9 @@ def main():
                     fail(rel, f"missing required text: {needle}")
         if rel == "walks.html":
             check_structured_data(rel, html, data)
+    public_data = ROOT / "event-data.json"
+    if public_data.exists():
+        check_public_language(public_data.relative_to(ROOT).as_posix(), public_data.read_text(encoding="utf-8"))
     for rel in SALES_PAGES:
         if not (ROOT / rel).exists():
             fail(rel, "principal page missing")
