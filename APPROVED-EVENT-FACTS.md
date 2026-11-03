@@ -4,7 +4,7 @@ This is the working source of truth for customer-facing event information. Copy
 approved facts from here; do not reconstruct them from memory. Items marked
 **Confirmation required** must not be presented as settled policy.
 
-Last checked against the repository: 2 November 2026.
+Last checked against the repository: 3 November 2026.
 
 ## Event
 
@@ -32,10 +32,13 @@ Last checked against the repository: 2 November 2026.
 
 - **Published meeting point:** Riverside entrance of Aviva Studios, Water
   Street, Manchester M3 4JG
+- **Owner-confirmed meeting-point photograph:** `images/access/aviva-studios-riverside-entrance.jpeg`.
+  The owner identifies the pictured location as the Riverside entrance meeting
+  point.
 - Hosts welcome visitors inside The Social before the walk.
-- **Confirmation required:** Venue-approved entrance name, whether visitors
-  should initially wait inside or outside, exact staff position, accessible
-  drop-off, public-transport directions and practical arrival photographs.
+- **Confirmation required:** Map pin, where visitors should initially wait,
+  exact staff position, day-of-event contact process, accessible drop-off,
+  public-transport directions and any further practical arrival instructions.
 
 ## Tickets
 
