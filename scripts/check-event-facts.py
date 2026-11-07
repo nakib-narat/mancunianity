@@ -545,9 +545,11 @@ def main():
         print("FAIL")
         print("\n".join(ERRORS))
         sys.exit(1)
+    skipped = len(pages) - len(parsed_pages)
     print(
-        f"OK: {len(pages)} HTML documents scanned; "
-        f"{len(REQUIRED_PAGES)} required event pages present; six unique Event records validated."
+        f"OK: HTML pages discovered: {len(pages)}; checked: {len(parsed_pages)}; "
+        f"event-related pages checked: {sum(page in parsed_pages for page in REQUIRED_PAGES)}; "
+        f"pages skipped: {skipped}; Event records checked: {len(all_events)}."
     )
 
 
