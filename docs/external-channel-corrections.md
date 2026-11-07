@@ -1,47 +1,86 @@
 # External channel corrections
 
-The repository does not control the channels below. Update each one manually
-using this exact wording. Source of truth: `APPROVED-EVENT-FACTS.md` and
-`event-data.json`. Gathering/check-in times (10:00, 13:00) are never walk
-departure times; walks depart at 10:30 and 13:30. Never say "arrive 20 minutes
-before" and never shorten to "times: 10:00 and 13:00".
+The repository does not control TryBooking, issued tickets, partner listings or
+social accounts. The event owner must update each external channel manually.
+Use `APPROVED-EVENT-FACTS.md` as the website source of truth; do not copy the
+known postcode, location or spelling errors from a third-party listing.
 
 ## TryBooking ticket wording
 
-- Children aged 3 and under: free, but a free ticket must be booked for every child.
-- Children and young people aged 4–17: £5.
-- Adult £15 · Senior aged 65+ £12 · Family bundle: £38 for two adults and two children or young people aged 4–17. Children aged 3 and under attend free but require their own free ticket within the same booking · Access companion: free, but a free ticket must be reserved.
+- Adult: £15
+- Senior aged 65 and over: £12
+- Child or young person aged 3–17: £5
+- Under three: free, but a free ticket must be booked
+- Access Companion: free, but a free ticket must be booked
+- Family Bundle: £38 for two adults and two children or young people aged 3–17
 
-Owner-approved and verified: a child aged 3 and under needs an individual free
-ticket type selected within the same booking. TryBooking allows adult, senior
-65+, child aged 4–17, aged-3-and-under free, family bundle and access-companion
-tickets to be selected in one booking. Children aged 3 and under do not count as
-one of the family bundle's two child places.
+> Under-threes and Access Companions attend free, but a free ticket must still
+> be booked for every person attending.
 
-## TryBooking timing wording
+Do not change prices or the Family Bundle composition. Do not edit issued
+customer tickets.
 
-- Morning: arrive from 10:00 for gathering and check-in; the walk departs at 10:30.
-- Afternoon: arrive from 13:00 for gathering and check-in; the walk departs at 13:30.
-- Please arrive at the gathering time. Walks leave promptly.
+## TryBooking performance and arrival wording
 
-## Confirmation email
+- Morning performance starts at 10:30 am; arrival and check-in from 10:00 am.
+- Afternoon performance starts at 1:30 pm; arrival and check-in from 1:00 pm.
+- Recommended latest check-in is 10:25 am for the morning and 1:25 pm for the
+  afternoon performance.
 
-> Your booking is for the [10:30/13:30] walk departure. Please arrive at [10:00/13:00] for check-in, welcome and headset fitting. The walk will leave promptly.
+> Please arrive at The Social, Aviva Studios, from 10:00 am for the 10:30 am
+> performance, or from 1:00 pm for the 1:30 pm performance.
+>
+> The 30-minute arrival period allows time for check-in and wireless headset
+> collection. We recommend checking in no later than 10:25 am for the morning
+> performance or 1:25 pm for the afternoon performance.
+>
+> The walking group leaves the meeting point when the performance starts at
+> 10:30 am and 1:30 pm.
 
-## Social posts and advertising
+Do not alter issued tickets or imply that booked performance times changed.
 
-> Walk departures at 10:30 and 13:30. Advance gathering and check-in begin at 10:00 and 13:00.
+## Venue and location
 
-## Press releases and listings (including Aviva Studios)
+> Meet at The Social, Aviva Studios.
 
-Use the social wording above plus the ticket wording from the TryBooking section.
-Remove any "under 3s", "ages 3–17", "no ticket required" or "20 minutes before"
-wording.
+> The Social, Aviva Studios, Water Street, Manchester M3 4JQ
 
-## Open owner decisions
+Replace the incorrect M3 4JG postcode and any spelling of “Water STreet” on
+external event listings. Do not identify the Riverside entrance as the
+Mancunianity Flows meeting point.
 
-- Resolved: the family bundle covers two adults and two children or young
-  people aged 4–17. Children aged 3 and under are not paid child places in the
-  bundle; each needs a free ticket in the same booking. Apply this rule on TryBooking.
-- The earlier ticket-listing postcode and other items marked **Confirmation
-  required** in `APPROVED-EVENT-FACTS.md` remain unresolved.
+## Duration, weather and late joining
+
+> The complete experience usually lasts approximately 65 minutes. Please allow
+> up to 70 minutes, including the final 15-minute musical finale.
+
+> The experience continues in most weather, so come prepared for the forecast
+> with warm, waterproof clothing and suitable footwear.
+>
+> If severe weather makes a performance unsafe, affected ticket holders will be
+> contacted by email and offered a transfer to another performance, subject to
+> availability, or a refund.
+
+> If you arrive after the performance has started, you may be able to catch up
+> and join the group because the route is short. However, joining the group and
+> receiving a wireless headset cannot be guaranteed.
+
+Do not promise a catch-up location, staff presence, headset, late-arrival refund
+or transfer.
+
+## Organiser and contact
+
+> Mancunianity Flows is organised by Nakib Narat.
+>
+> For general, booking or visitor enquiries, email
+> contact@mancunianity.uk.
+
+Keep the address clickable as
+`<a href="mailto:contact@mancunianity.uk">contact@mancunianity.uk</a>`.
+
+## Outstanding external action
+
+Update the live TryBooking event and partner/social listings using these
+approved corrections. These external changes are not part of this website pull
+request, and the repository does not establish whether those channels have
+already been corrected.

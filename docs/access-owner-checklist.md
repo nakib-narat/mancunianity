@@ -6,19 +6,13 @@ Update `access.html` only when the owner confirms a fact.
 
 ## Meeting point and arrival
 
-- [ ] Confirm where visitors should wait when they first arrive (inside or
-  outside) and any venue-approved entrance wording.
-- [ ] Confirm what visitors should look for to find the group.
-- [ ] Confirm staff position and a day-of-event contact process if someone
-  cannot find the group.
+The confirmed meeting and check-in point is The Social, Aviva Studios. The
+Riverside entrance photograph shows the venue approach; it does not identify
+the Mancunianity Flows meeting point.
+
 - [ ] Confirm accessible drop-off arrangements.
 - [ ] Confirm public-transport directions.
 - [ ] Confirm nearest accessible parking.
-
-The owner supplied and identified
-`images/access/aviva-studios-riverside-entrance.jpeg` as the Riverside entrance
-meeting point. The meeting point and photograph are included in the public
-guide; this does not establish a map pin or arrival procedure.
 
 ## Route and mobility
 
