@@ -104,3 +104,4 @@ a:focus-visible,button:focus-visible,audio:focus-visible{outline:3px solid #8755
   .access-content>section{margin-bottom:14pt;padding-bottom:10pt}
   .access-meeting-photo img{max-width:420px}
 }
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
