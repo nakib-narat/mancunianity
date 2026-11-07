@@ -1,5 +1,11 @@
 document.querySelectorAll('[data-year]').forEach(e=>e.textContent=new Date().getFullYear());
 (function(){
+  document.querySelectorAll('a[target="_blank"][href*="trybooking.com/uk/HEFF"]').forEach(link=>{
+    const label=link.getAttribute('aria-label')||link.textContent.trim();
+    if(!/\bopens in a new tab\b/i.test(label)) link.setAttribute('aria-label',`${label} (opens in a new tab)`);
+  });
+})();
+(function(){
   const nav=document.querySelector('.menu');
   if(!nav || nav.querySelector('a[href="stories-learning.html"]')) return;
   const link=document.createElement('a');
