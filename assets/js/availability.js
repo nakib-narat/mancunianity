@@ -3,7 +3,7 @@
   const buttons = [...document.querySelectorAll('.slot-choices [data-session]')];
   if (!status || buttons.length === 0) return;
 
-  const staleMessage = 'Availability figures need updating. Please check TryBooking for current availability.';
+  const unknownAvailabilityMessage = 'Check current performance availability and book securely through TryBooking.';
   const unavailableMessage = 'Availability could not be checked. Please check TryBooking for current availability.';
   const maxAge = 24 * 60 * 60 * 1000;
   const performanceStatuses = {
@@ -20,6 +20,14 @@
     'cancelled_performance',
   ]);
   const notice = document.getElementById('event-urgent-notice');
+
+  function showUnknownAvailability() {
+    status.replaceChildren(document.createTextNode(`${unknownAvailabilityMessage} `));
+    const link = document.createElement('a');
+    link.href = 'https://www.trybooking.com/uk/HEFF';
+    link.textContent = 'View performances and availability';
+    status.append(link);
+  }
 
   function showUrgentNotice(value) {
     if (!notice || !value || !noticeTypes.has(value.type)) return;
@@ -69,7 +77,7 @@
       });
 
       if (!Number.isFinite(updatedAt) || age < 0 || age > maxAge || !hasAllCounts) {
-        status.textContent = staleMessage;
+        showUnknownAvailability();
         return;
       }
 
@@ -100,10 +108,12 @@
         timeStyle: 'short',
         timeZone: 'UTC',
       }).format(updatedAt);
-      const hasAvailabilityCounts = sessionIds.some((id) => data.sessions[id].remaining !== null);
-      status.textContent = hasAvailabilityCounts
-        ? `Availability last updated ${timestamp} UTC. Confirm your place on TryBooking.`
-        : `Performance statuses last updated ${timestamp} UTC. Confirm ticket availability on TryBooking.`;
+      const hasAllAvailabilityCounts = sessionIds.every((id) => data.sessions[id].remaining !== null);
+      if (hasAllAvailabilityCounts) {
+        status.textContent = `Availability last updated ${timestamp} UTC. Confirm your place on TryBooking.`;
+      } else {
+        showUnknownAvailability();
+      }
     })
     .catch(() => {
       status.textContent = unavailableMessage;
