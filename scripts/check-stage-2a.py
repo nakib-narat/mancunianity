@@ -22,6 +22,8 @@ EXPECTED_NAV = (
     ("/access.html", "Plan Your Visit"),
     ("/families.html", "Families & Access"),
     ("/stories-learning.html", "Stories & Learning"),
+    ("/people.html", "Meet the People"),
+    ("/weavers/", "The Weavers"),
     ("/about/", "About"),
 )
 ERRORS = []
