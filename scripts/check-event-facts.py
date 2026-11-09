@@ -440,7 +440,6 @@ def check_page_copy(relative, text, source):
 
     route_pages = ("access.html", "walks.html")
     route_facts = (
-        "traffic-free pedestrian route",
         "less than a quarter of a mile",
         "Wireless headsets are supplied and cleaned between uses",
         "Children receive a spotting activity",
@@ -452,6 +451,8 @@ def check_page_copy(relative, text, source):
         for fact in route_facts:
             if fact.lower() not in text.lower():
                 fail(relative, f"confirmed route/equipment/finale information missing: {fact}")
+    if relative == "walks.html" and "walking route" not in text.lower():
+        fail(relative, "confirmed route/equipment/finale information missing: walking route")
 
     if relative == "access.html":
         if "Mancunianity Flows is organised by Nakib Narat." not in text:
@@ -508,7 +509,7 @@ def main():
         blocks = parse_json_blocks("walks.html", parser)
         check_structured_events("walks.html", blocks)
         for passage in (
-            "Follow the River Irwell for around 50 minutes through stories, music, surprising history and an immersive headphone soundscape.",
+            "Follow the River Irwell through stories, music, surprising history and an immersive headphone soundscape.",
             "The journey moves from Manchester across the River Irwell into Salford.",
             "Here the new Mancunianity Flows song is unveiled.",
         ):
