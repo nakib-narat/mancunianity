@@ -1,0 +1,19 @@
+name: Content preservation checks
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check Stage 2A
+        run: python3 scripts/check-stage-2a.py
+      - name: Check event facts
+        run: python3 scripts/check-event-facts.py
